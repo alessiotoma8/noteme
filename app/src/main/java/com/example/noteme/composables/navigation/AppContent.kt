@@ -30,50 +30,7 @@ fun AppContent() {
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         topBar = {
-            CenterAlignedTopAppBar(
-                title = {
-                    Column {
-                        Text(
-                            text = "NoteMe!",
-                            style = MaterialTheme.typography.headlineMedium,
-                            color = MaterialTheme.colorScheme.primary,
-                            fontWeight = FontWeight.SemiBold
-                        )
-                        Text(
-                            text = "Never forget yur thinkink",
-                            style = MaterialTheme.typography.bodySmall
-                        )
-                    }
-                },
-                colors = TopAppBarDefaults.topAppBarColors().copy(
-                    containerColor = MaterialTheme.colorScheme.surface,
-                ),
-                navigationIcon = {
-                    IconButton(onClick = { /* Handle menu icon click */ }) {
-                        //Se sono loggfato persona e impostazioni
-                        //se dentro menu duivneta un back
-                        //Icon(Icons.Default.Menu, contentDescription = "Menu")
-//                        Icon(
-//                            modifier = Modifier
-//                                .clip(CircleShape)
-//                                .background(MaterialTheme.colorScheme.primary)
-//                                .padding(8.dp),
-//                            imageVector = Icons.Default.Settings,
-//                            contentDescription = "User icon",
-//                            tint = MaterialTheme.colorScheme.onPrimary,
-//                        )
-//                        Icon(
-//                            modifier = Modifier
-//                                .clip(CircleShape)
-//                                .background(MaterialTheme.colorScheme.primary)
-//                                .padding(8.dp),
-//                            imageVector = Icons.Default.ArrowBack,
-//                            contentDescription = "User icon",
-//                            tint = MaterialTheme.colorScheme.onPrimary,
-//                        )
-                    }
-                }
-            )
+            TopAppBar(navController = navController)
         },
         floatingActionButton = {
             //if (navController.currentDestination?.route == Screen.Home.route) {

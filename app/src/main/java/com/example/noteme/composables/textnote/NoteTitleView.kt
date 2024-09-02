@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Save
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -52,7 +53,7 @@ fun NoteTitleView() {
             Box(Modifier.fillMaxSize()) {
                 Icon(
                     modifier = Modifier.align(Alignment.Center),
-                    imageVector = Icons.Filled.Settings,
+                    imageVector = Icons.Filled.Save,
                     contentDescription = "Add",
                     tint = MaterialTheme.colorScheme.primary
                 )
